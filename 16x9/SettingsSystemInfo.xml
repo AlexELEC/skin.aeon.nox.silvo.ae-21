@@ -71,14 +71,6 @@
 					<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="3">listselect_fo.png</texturefocus>
 					<label>482</label>
 				</control>
-				<control type="button" id="100">
-					<description>Button Kodi Privacy Policy</description>
-					<width>356</width>
-					<height>90</height>
-					<font>font15</font>
-					<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="3">listselect_fo.png</texturefocus>
-					<label>12389</label>
-				</control>
 			</control>
 			<control type="grouplist" id="9001">
 				<left>437</left>
