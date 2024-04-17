@@ -119,6 +119,17 @@
 					<textcolor>$VAR[ThemeHomeLabelColor]</textcolor>
 					<shadowcolor>shadow</shadowcolor>
 				</control>
+				<control type="label">
+					<right>1100</right>
+					<top>46</top>
+					<width>800</width>
+					<height>41</height>
+					<align>left</align>
+					<label>[COLOR grey]CPU:[/COLOR] $INFO[System.CpuFrequency][COLOR grey] | TMP:[/COLOR] $INFO[System.CPUTemperature][COLOR grey] | RAM:[/COLOR] $INFO[System.Memory(used.percent)]</label>
+					<font>font13_title</font>
+					<textcolor>$VAR[ThemeHomeLabelColor]</textcolor>
+					<shadowcolor>shadow</shadowcolor>
+				</control>
 				<control type="grouplist" id="9020">
 					<visible>!String.IsEmpty(Container(9000).ListItem.Property(InfoLine)) | !Skin.HasSetting(CenteredInfoLine)</visible>
 					<left>1100</left>
