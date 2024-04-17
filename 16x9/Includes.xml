@@ -379,7 +379,52 @@
 				<onback>50</onback>
 				<include condition="Skin.HasSetting(KioskMode.Enabled)">KioskModeButton</include>
 				<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(1128)" reversible="true">Conditional</animation>
-				<control type="button" id="203">
+				<control type="label" id="200">
+					<description>View options</description>
+					<width>400</width>
+					<height>52</height>
+					<textoffsetx>15</textoffsetx>
+					<font>font13_title</font>
+					<label>31006</label>
+					<textcolor>$VAR[ThemeLabelColor]</textcolor>
+				</control>
+				<control type="button" id="28">
+					<description>Channel Groups</description>
+					<textwidth>255</textwidth>
+					<include>ButtonCommonValues</include>
+					<label />
+					<visible>Window.IsActive(tvchannels) | Window.IsActive(tvguide)</visible>
+				</control>
+				<control type="button" id="2">
+					<description>View As button</description>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+					<visible>!Window.IsActive(tvguide)</visible>
+				</control>
+				<control type="button" id="3">
+					<description>Sort by button</description>
+					<include>ButtonCommonValues</include>
+					<label>103</label>
+				</control>
+				<control type="togglebutton" id="4">
+					<description>Sort asc</description>
+					<include>ButtonCommonValues</include>
+					<label>31051</label>
+					<altlabel>31050</altlabel>
+					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
+				</control>
+				<control type="radiobutton" id="31">
+					<include>ButtonCommonValues</include>
+					<label>$LOCALIZE[587]</label>
+					<selected>Container.Filtered</selected>
+					<visible>Window.IsActive(MyPVRChannels.xml)</visible>
+				</control>
+				<control type="button" id="2001">
+					<include>ButtonCommonValues</include>
+					<label>$LOCALIZE[33068]</label>
+					<onclick>ActivateWindow(1128)</onclick>
+				</control>
+                <control type="button" id="203">
 					<description>Quicknav</description>
 					<textwidth>352</textwidth>
 					<font>font13_title</font>
@@ -438,51 +483,6 @@
 					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
 					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
 					<visible>![Skin.HasSetting(Disable.PVRSearch) | Window.IsActive(tvsearch)]</visible>
-				</control>
-				<control type="label" id="200">
-					<description>View options</description>
-					<width>400</width>
-					<height>52</height>
-					<textoffsetx>15</textoffsetx>
-					<font>font13_title</font>
-					<label>31006</label>
-					<textcolor>$VAR[ThemeLabelColor]</textcolor>
-				</control>
-				<control type="button" id="28">
-					<description>Channel Groups</description>
-					<textwidth>255</textwidth>
-					<include>ButtonCommonValues</include>
-					<label />
-					<visible>Window.IsActive(tvchannels) | Window.IsActive(tvguide)</visible>
-				</control>
-				<control type="button" id="2">
-					<description>View As button</description>
-					<textwidth>352</textwidth>
-					<include>ButtonCommonValues</include>
-					<visible>!Window.IsActive(tvguide)</visible>
-				</control>
-				<control type="button" id="3">
-					<description>Sort by button</description>
-					<include>ButtonCommonValues</include>
-					<label>103</label>
-				</control>
-				<control type="togglebutton" id="4">
-					<description>Sort asc</description>
-					<include>ButtonCommonValues</include>
-					<label>31051</label>
-					<altlabel>31050</altlabel>
-					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
-				</control>
-				<control type="radiobutton" id="31">
-					<include>ButtonCommonValues</include>
-					<label>$LOCALIZE[587]</label>
-					<selected>Container.Filtered</selected>
-					<visible>Window.IsActive(MyPVRChannels.xml)</visible>
-				</control>
-				<control type="button" id="2001">
-					<include>ButtonCommonValues</include>
-					<label>$LOCALIZE[33068]</label>
-					<onclick>ActivateWindow(1128)</onclick>
 				</control>
 				<control type="button" id="201">
 					<description>View options</description>
