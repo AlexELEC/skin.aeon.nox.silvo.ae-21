@@ -3176,3 +3176,15 @@ msgstr ""
 msgctxt "#31994"
 msgid "Vertical Menu"
 msgstr ""
+
+msgctxt "#32300"
+msgid "Cancel Timer"
+msgstr "Відмінити таймер"
+
+msgctxt "#32301"
+msgid "Restart Kodi"
+msgstr "Перезавантажити Kodi"
+
+msgctxt "#31576"
+msgid "Reboot to Android"
+msgstr "Переключити на Android"
