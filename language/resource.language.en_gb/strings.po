@@ -2373,3 +2373,11 @@ msgstr ""
 msgctxt "#31994"
 msgid "Vertical Menu"
 msgstr ""
+
+msgctxt "#32300"
+msgid "Cancel Timer"
+msgstr ""
+
+msgctxt "#32301"
+msgid "Restart Kodi"
+msgstr ""
