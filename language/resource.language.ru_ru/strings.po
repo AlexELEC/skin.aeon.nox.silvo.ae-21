@@ -3516,3 +3516,15 @@ msgstr "Вертикальное меню"
 #~ msgctxt "#31451"
 #~ msgid "  •  Click to Install"
 #~ msgstr "• Нажмите, чтобы установить"
+
+msgctxt "#32300"
+msgid "Cancel Timer"
+msgstr "Отменить таймер"
+
+msgctxt "#32301"
+msgid "Restart Kodi"
+msgstr "Перезагрузить Kodi"
+
+msgctxt "#31576"
+msgid "Reboot to Android"
+msgstr "Переключить в Android"

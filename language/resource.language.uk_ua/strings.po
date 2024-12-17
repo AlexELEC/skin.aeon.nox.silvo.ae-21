@@ -2403,126 +2403,14 @@ msgctxt "#31994"
 msgid "Vertical Menu"
 msgstr ""
 
-#~ msgctxt "#31003"
-#~ msgid "Power Options"
-#~ msgstr "Налаштування живлення"
+msgctxt "#32300"
+msgid "Cancel Timer"
+msgstr "Відмінити таймер"
 
-#~ msgctxt "#31008"
-#~ msgid "Full screen"
-#~ msgstr "Повний екран"
+msgctxt "#32301"
+msgid "Restart Kodi"
+msgstr "Перезавантажити Kodi"
 
-#~ msgctxt "#31009"
-#~ msgid "Total Duration"
-#~ msgstr "Загальна тривалість"
-
-#~ msgctxt "#31024"
-#~ msgid "Page"
-#~ msgstr "сторінка"
-
-#~ msgctxt "#31032"
-#~ msgid "Recommended movies"
-#~ msgstr "Рекомендовані фільми"
-
-#~ msgctxt "#31034"
-#~ msgid "Recommended episodes"
-#~ msgstr "Рекомендовані епізоди"
-
-#~ msgctxt "#31035"
-#~ msgid "Random songs"
-#~ msgstr "Випадкові пісні"
-
-#~ msgctxt "#31036"
-#~ msgid "Random albums"
-#~ msgstr "Випадкові альбоми"
-
-#~ msgctxt "#31037"
-#~ msgid "Recent albums"
-#~ msgstr "Останні альбоми"
-
-#~ msgctxt "#31038"
-#~ msgid "Recommended albums"
-#~ msgstr "Рекомендовані альбоми"
-
-#~ msgctxt "#31048"
-#~ msgid "Visualisation Presets"
-#~ msgstr "Налаштування візуалізації"
-
-#~ msgctxt "#31060"
-#~ msgid "This file is stacked, select the part you want to play from."
-#~ msgstr "Складений файл; виберіть частину для відтворення."
-
-#~ msgctxt "#31089"
-#~ msgid "Play item on startup"
-#~ msgstr "Запускати при вмиканні"
-
-#~ msgctxt "#31142"
-#~ msgid "Settings level"
-#~ msgstr "Рівень налаштувань"
-
-#~ msgctxt "#31176"
-#~ msgid "Trending Movies"
-#~ msgstr "Популярні фільми"
-
-#~ msgctxt "#31230"
-#~ msgid "Panel"
-#~ msgstr "Панель"
-
-#~ msgctxt "#31274"
-#~ msgid "Artwork"
-#~ msgstr "Картинки"
-
-#~ msgctxt "#31307"
-#~ msgid "Hide Fanart"
-#~ msgstr "Приховати фанарт"
-
-#~ msgctxt "#31317"
-#~ msgid "Set Fanart Path"
-#~ msgstr "Вибрати розташування фанарту"
-
-#~ msgctxt "#31321"
-#~ msgid "Karaoke Song Selector"
-#~ msgstr "Вибір пісень для караоке"
-
-#~ msgctxt "#31708"
-#~ msgid "Sort by"
-#~ msgstr "Сортувати за"
-
-#~ msgctxt "#31910"
-#~ msgid "Map & Alerts"
-#~ msgstr "Мапи та попередження"
-
-#~ msgctxt "#31950"
-#~ msgid "WEATHER"
-#~ msgstr "ПОГОДА"
-
-#~ msgctxt "#31951"
-#~ msgid "PICTURES"
-#~ msgstr "МАЛЮНКИ"
-
-#~ msgctxt "#31952"
-#~ msgid "LIVE TV"
-#~ msgstr "ТЕЛЕБАЧЕННЯ"
-
-#~ msgctxt "#31953"
-#~ msgid "VIDEOS"
-#~ msgstr "ВІДЕО"
-
-#~ msgctxt "#31954"
-#~ msgid "MOVIES"
-#~ msgstr "ФІЛЬМИ"
-
-#~ msgctxt "#31955"
-#~ msgid "TV SHOWS"
-#~ msgstr "ТВ-ШОУ"
-
-#~ msgctxt "#31956"
-#~ msgid "MUSIC"
-#~ msgstr "МУЗИКА"
-
-#~ msgctxt "#31958"
-#~ msgid "PLAY DISC"
-#~ msgstr "ПРОГРАВАННЯ ДИСКУ"
-
-#~ msgctxt "#31959"
-#~ msgid "SYSTEM"
-#~ msgstr "СИСТЕМА"
+msgctxt "#31576"
+msgid "Reboot to Android"
+msgstr "Переключити на Android"
