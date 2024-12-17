@@ -30,7 +30,7 @@
 				<pagecontrol>60960</pagecontrol>
 				<preloaditems>2</preloaditems>
 				<scrolltime tween="quadratic">400</scrolltime>
-				<visible>!System.AddonIsEnabled(script.skinvariables) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets)] | Window.IsActive(music) + [Container.Content(artists) | Container.Content(albums) | Container.Content(files)] | !Window.IsActive(music) + System.AddonIsEnabled(script.skinvariables) + $EXP[Exp_View_609]</visible>
+				<visible>!Skin.HasSetting(skinvariables.viewtypes) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets)] | Window.IsActive(music) + [Container.Content(artists) | Container.Content(albums) | Container.Content(files)] | !Window.IsActive(music) + Skin.HasSetting(skinvariables.viewtypes) + $EXP[Exp_View_609]</visible>
 				<itemlayout width="240" height="360" condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets)] + !Skin.HasSetting(Enable.SmallerFullscreenWallPosters)">
 					<control type="group">
 						<control type="image">
@@ -300,12 +300,6 @@
 				<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">solid_bg.png</texturesliderbarfocus>
 				<animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(60960) + !Container.Scrolling">Conditional</animation>
 				<animation effect="zoom" start="100,100" end="200,100" center="auto" tween="sine" easing="inout" time="500" pulse="true" condition="Control.HasFocus(60960)">Conditional</animation>
-			</control>
-			<control type="group">
-				<include content="InfoPopup">
-					<param name="StudioLabelID">609</param>
-				</include>
-				<visible>Control.HasFocus(609) + !ListItem.IsParentFolder + Skin.HasSetting(Enable.FullscreenWallInfoPopup)</visible>
 			</control>
 		</control>
 	</include>

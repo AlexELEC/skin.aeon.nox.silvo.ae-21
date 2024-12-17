@@ -16,7 +16,7 @@
 			</control>
 			<control type="group">
 				<left>5</left>
-				<top>380</top>
+				<top>376</top>
 				<visible>[!Skin.HasSetting(Enable.Rightlist.HidePoster.Movies) + Container.Content(movies)] | [!Skin.HasSetting(Enable.Rightlist.HidePoster.Sets) + Container.Content(sets)] | [!Skin.HasSetting(Enable.Rightlist.HidePoster.tvshows) + Container.Content(tvshows)] | [!Skin.HasSetting(Enable.Rightlist.HidePoster.seasons) + Container.Content(seasons)] | [!Skin.HasSetting(Enable.Rightlist.HidePoster.episodes) + Container.Content(episodes)]</visible>
 				<control type="group">
 					<top>-170</top>
@@ -39,22 +39,14 @@
 						<visible>ListItem.IsCollection + String.IsEmpty(ListItem.Art(discart))</visible>
 					</control>
 				</control>
-				<control type="multiimage">
-					<left>40</left>
-					<top>40</top>
-					<width>370</width>
-					<height>555</height>
-					<aspectratio aligny="bottom">stretch</aspectratio>
-					<imagepath background="true">$VAR[FocusedPosterThumbVar]</imagepath>
-					<fadetime>IconCrossfadeTime</fadetime>
-				</control>
 				<control type="image">
 					<left>20</left>
 					<top>20</top>
 					<width>410</width>
 					<height>595</height>
 					<aspectratio aligny="bottom">stretch</aspectratio>
-					<texture>colors/black10.png</texture>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$VAR[FocusedPosterThumbVar]</texture>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
@@ -166,27 +158,12 @@
 					<control type="group">
 						<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
 						<control type="label">
-							<width>570</width>
-							<height>55</height>
-							<label>[COLOR $VAR[ThemeLabelColor]]$LOCALIZE[126]:[/COLOR] $INFO[Container(9143).ListItem.Property(Status)]</label>
-							<include>DefaultButtonsValues</include>
-							<visible>!String.IsEmpty(Container(9143).ListItem.Property(Status)) + !Skin.HasSetting(Disable.NextAired)</visible>
-						</control>
-						<control type="label">
-							<top>55</top>
+							<top>110</top>
 							<width>570</width>
 							<height>55</height>
 							<label>$VAR[TMDbHelperNextAiredLabelVar]</label>
 							<include>DefaultButtonsValues</include>
 							<visible>!Skin.HasSetting(Disable.NextAired)</visible>
-						</control>
-						<control type="label">
-							<top>110</top>
-							<width>570</width>
-							<height>55</height>
-							<label>[COLOR $VAR[ThemeLabelColor]]$LOCALIZE[515]:[/COLOR] $INFO[ListItem.Genre]</label>
-							<include>DefaultButtonsValues</include>
-							<visible>!String.IsEmpty(ListItem.Genre)</visible>
 						</control>
 					</control>
 					<control type="group">
@@ -272,12 +249,6 @@
 					<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 				</control>
-			</control>
-			<control type="group">
-				<include content="InfoPopup">
-					<param name="StudioLabelID">506</param>
-				</include>
-				<visible>Skin.HasSetting(inforightlist) + Skin.HasSetting(Enable.RightListInfoPopup) + Control.HasFocus(506) + !ListItem.IsParentFolder</visible>
 			</control>
 		</control>
 	</include>
@@ -522,7 +493,7 @@
 		<ondown>506</ondown>
 		<pagecontrol>50660</pagecontrol>
 		<viewtype label="$LOCALIZE[31239]">list</viewtype>
-		<visible>!System.AddonIsEnabled(script.skinvariables) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] | System.AddonIsEnabled(script.skinvariables) + $EXP[Exp_View_506]</visible>
+		<visible>!Skin.HasSetting(skinvariables.viewtypes) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(skinvariables.viewtypes) + $EXP[Exp_View_506]</visible>
 		<scrolltime tween="quadratic" easing="out">200</scrolltime>
 		<itemlayout height="82" width="806" condition="[!Skin.HasSetting(rightlistalternate) + Container.Content(movies)]">
 			<include content="RightListItemLayout">

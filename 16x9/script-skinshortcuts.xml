@@ -125,15 +125,15 @@
 						</focusedlayout>
 					</control>
 					<control type="grouplist" id="90000">
-						<left>405</left>
+						<left>408</left>
 						<top>32</top>
-						<width>356</width>
+						<width>350</width>
 						<height>81</height>
 						<onright>90001</onright>
 						<onup>Control.Move(211,-1)</onup>
 						<ondown>Control.Move(211,1)</ondown>
 						<orientation>horizontal</orientation>
-						<itemgap>-20</itemgap>
+						<itemgap>-24</itemgap>
 						<visible>String.IsEmpty(Window(Home).Property(skinshortcuts-management-widget))</visible>
 						<animation effect="slide" end="120" condition="String.IsEqual(Window.Property(groupname),buttonmenu)">Conditional</animation>
 						<animation effect="slide" end="0,81" condition="Integer.IsGreater(Container(211).Position,0)">Conditional</animation>
@@ -354,7 +354,7 @@
 									<label>$LOCALIZE[31273]</label>
 									<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetLiveTV))">SetProperty(customProperty,widgetLiveTV)</onclick>
 									<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetLiveTV))">SetProperty(customProperty,widgetLiveTV)</onclick>
-									<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetLiveTV))">SetProperty(customValue,true)</onclick>
+									<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetLiveTV))">SetProperty(customValue,True)</onclick>
 									<onclick>SendClick(404)</onclick>
 									<selected>!String.IsEmpty(Container(211).ListItem.Property(widgetLiveTV))</selected>
 									<visible>System.HasPVRAddon + [PVR.HasTVChannels | PVR.HasRadioChannels] + String.IsEqual(Window.Property(groupname),mainmenu)</visible>
@@ -441,7 +441,7 @@
 							<include>SettingsButtonCommonValues</include>
 							<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetPanelInfo))">SetProperty(customProperty,widgetPanelInfo)</onclick>
 							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetPanelInfo))">SetProperty(customProperty,widgetPanelInfo)</onclick>
-							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetPanelInfo))">SetProperty(customValue,true)</onclick>
+							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetPanelInfo))">SetProperty(customValue,True)</onclick>
 							<onclick>SendClick(404)</onclick>
 							<selected>!String.IsEmpty(Container(211).ListItem.Property(widgetPanelInfo))</selected>
 							<label>31705</label>
@@ -453,7 +453,7 @@
 							<label>31289</label>
 							<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetHide))">SetProperty(customProperty,widgetHide)</onclick>
 							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetHide))">SetProperty(customProperty,widgetHide)</onclick>
-							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetHide))">SetProperty(customValue,true)</onclick>
+							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetHide))">SetProperty(customValue,True)</onclick>
 							<onclick>SendClick(404)</onclick>
 							<selected>!String.IsEmpty(Container(211).ListItem.Property(widgetHide))</selected>
 							<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath)) + !String.IsEmpty(Container(211).ListItem.Property(widgetStyle))</visible>
@@ -464,7 +464,7 @@
 							<label>31444</label>
 							<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetDisableFanart))">SetProperty(customProperty,widgetDisableFanart)</onclick>
 							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetDisableFanart))">SetProperty(customProperty,widgetDisableFanart)</onclick>
-							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetDisableFanart))">SetProperty(customValue,true)</onclick>
+							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetDisableFanart))">SetProperty(customValue,True)</onclick>
 							<onclick>SendClick(404)</onclick>
 							<selected>!String.IsEmpty(Container(211).ListItem.Property(widgetDisableFanart))</selected>
 							<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath)) + !String.IsEmpty(Container(211).ListItem.Property(widgetStyle))</visible>
@@ -585,7 +585,7 @@
 							<label>31705</label>
 							<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetPanelInfo.2))">SetProperty(customProperty,widgetPanelInfo.2)</onclick>
 							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetPanelInfo.2))">SetProperty(customProperty,widgetPanelInfo.2)</onclick>
-							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetPanelInfo.2))">SetProperty(customValue,true)</onclick>
+							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetPanelInfo.2))">SetProperty(customValue,True)</onclick>
 							<onclick>SendClick(404)</onclick>
 							<selected>!String.IsEmpty(Container(211).ListItem.Property(widgetPanelInfo.2))</selected>
 							<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.2)) + !String.IsEmpty(Container(211).ListItem.Property(widgetStyle.2)) + !String.Contains(Container(211).ListItem.Property(widgetStyle.2),List)</visible>
@@ -596,7 +596,7 @@
 							<label>31289</label>
 							<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetHide))">SetProperty(customProperty,widgetHide.2)</onclick>
 							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetHide))">SetProperty(customProperty,widgetHide.2)</onclick>
-							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetHide.2))">SetProperty(customValue,true)</onclick>
+							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetHide.2))">SetProperty(customValue,True)</onclick>
 							<onclick>SendClick(404)</onclick>
 							<selected>!String.IsEmpty(Container(211).ListItem.Property(widgetHide.2))</selected>
 							<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.2)) + !String.IsEmpty(Container(211).ListItem.Property(widgetStyle.2))</visible>
@@ -607,7 +607,7 @@
 							<label>31444</label>
 							<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetDisableFanart.2))">SetProperty(customProperty,widgetDisableFanart.2)</onclick>
 							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetDisableFanart.2))">SetProperty(customProperty,widgetDisableFanart.2)</onclick>
-							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetDisableFanart.2))">SetProperty(customValue,true)</onclick>
+							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetDisableFanart.2))">SetProperty(customValue,True)</onclick>
 							<onclick>SendClick(404)</onclick>
 							<selected>!String.IsEmpty(Container(211).ListItem.Property(widgetDisableFanart.2))</selected>
 							<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.2)) + !String.IsEmpty(Container(211).ListItem.Property(widgetStyle.2))</visible>

@@ -145,21 +145,12 @@
 				<top>154</top>
 				<animation effect="slide" end="540,0" time="640" easing="inout" tween="circle" condition="String.IsEqual(Skin.String(TriPanelLayout),$LOCALIZE[31162])">Conditional</animation>
 				<animation effect="zoom" center="850,700" start="100" end="90" time="240" tween="back" reversible="false" condition="String.IsEqual(Skin.String(TriPanelLayout),$LOCALIZE[31162])">Conditional</animation>
-				<control type="multiimage">
-					<left>20</left>
-					<top>20</top>
-					<width>530</width>
-					<height>795</height>
-					<aspectratio aligny="bottom" align="right">scale</aspectratio>
-					<imagepath background="true">$VAR[FocusedPosterThumbVar]</imagepath>
-					<fadetime>IconCrossfadeTime</fadetime>
-				</control>
 				<control type="image">
 					<width>570</width>
 					<height>835</height>
 					<aspectratio aligny="bottom" align="right">scale</aspectratio>
-					<texture>colors/black10.png</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$VAR[FocusedPosterThumbVar]</texture>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
@@ -197,7 +188,7 @@
 					<viewtype label="31078">list</viewtype>
 					<pagecontrol>95560</pagecontrol>
 					<preloaditems>2</preloaditems>
-					<visible>!System.AddonIsEnabled(script.skinvariables) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets)] | System.AddonIsEnabled(script.skinvariables) + $EXP[Exp_View_55]</visible>
+					<visible>!Skin.HasSetting(skinvariables.viewtypes) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets)] | Skin.HasSetting(skinvariables.viewtypes) + $EXP[Exp_View_55]</visible>
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<itemlayout height="70" width="806" condition="Container.Content(movies)">
 						<control type="label">

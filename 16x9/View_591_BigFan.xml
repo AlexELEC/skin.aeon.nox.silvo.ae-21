@@ -13,7 +13,7 @@
 		<viewtype label="$LOCALIZE[31249]">list</viewtype>
 		<preloaditems>2</preloaditems>
 		<scrolltime tween="quadratic">200</scrolltime>
-		<visible>!System.AddonIsEnabled(script.skinvariables) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)] | System.AddonIsEnabled(script.skinvariables) + $EXP[Exp_View_591]</visible>
+		<visible>!Skin.HasSetting(skinvariables.viewtypes) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)] | Skin.HasSetting(skinvariables.viewtypes) + $EXP[Exp_View_591]</visible>
 		<itemlayout width="1080" height="1920" />
 		<focusedlayout width="1080" height="1920">
 			<control type="group">
@@ -42,25 +42,15 @@
 			<visible>Control.IsVisible(591) + !Window.IsActive(addoninformation)</visible>
 			<include>ViewAnimation</include>
 			<include>BigFanList</include>
-			<control type="multiimage">
-				<left>40</left>
-				<top>595</top>
-				<width>252</width>
-				<height>372</height>
-				<imagepath background="true">$VAR[FocusedPosterThumbVar]</imagepath>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
-			</control>
 			<control type="image">
 				<top>575</top>
 				<left>20</left>
 				<width>292</width>
 				<height>412</height>
-				<texture>colors/black10.png</texture>
-				<fadetime>200</fadetime>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture background="true">$VAR[FocusedPosterThumbVar]</texture>
 				<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 				<bordersize>20</bordersize>
-				<animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
 			</control>
 			<control type="image">
 				<left>243</left>
@@ -73,117 +63,61 @@
 			</control>
 			<control type="group">
 				<animation effect="slide" end="0,-140" condition="Skin.HasSetting(EnableBigFanPlot)">Conditional</animation>
-				<top>-65</top>
+				<top>845</top>
+				<left>330</left>
 				<control type="label">
-					<left>300</left>
-					<top>910</top>
 					<width>1400</width>
-					<height>42</height>
+					<height>50</height>
 					<aligny>top</aligny>
 					<font>font16_title</font>
 					<textcolor>grey</textcolor>
 					<scroll>true</scroll>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
-					<textoffsety>-2</textoffsety>
-					<textoffsetx>30</textoffsetx>
-				</control>
-				<control type="label">
-					<left>300</left>
-					<top>960</top>
-					<width>1105</width>
-					<height>30</height>
-					<font>font13_bold</font>
-					<textcolor>grey</textcolor>
-					<label>$VAR[FloorSubLabelVar]</label>
-					<textoffsetx>30</textoffsetx>
-					<visible>Container.Content(movies) + !ListItem.IsCollection</visible>
-				</control>
-				<control type="label">
-					<left>300</left>
-					<top>960</top>
-					<width>1105</width>
-					<height>30</height>
-					<font>font13_bold</font>
-					<textcolor>grey</textcolor>
-					<label>$INFO[Container(4500).ListItem(0).Year]$INFO[Container(4500).ListItem(-1).Year, - ]$INFO[Container(4500).NumItems, • , $LOCALIZE[342]]$INFO[ListItem.RatingAndVotes, • ]$INFO[Window(Home).Property(SkinInfo.Set.Movies.Runtime), • , $LOCALIZE[12391]]</label>
-					<textoffsetx>30</textoffsetx>
-					<visible>ListItem.IsCollection</visible>
-				</control>
-				<control type="label">
-					<left>300</left>
-					<top>1000</top>
-					<width>1305</width>
-					<height>30</height>
-					<label>$INFO[ListItem.Genre]</label>
-					<font>font13_bold</font>
-					<textcolor>grey</textcolor>
-					<textoffsetx>30</textoffsetx>
-					<scroll>true</scroll>
-				</control>
-				<control type="label">
-					<left>300</left>
-					<top>1000</top>
-					<width>1305</width>
-					<height>30</height>
-					<label>$VAR[MovieSetGenreVar]</label>
-					<font>font13_bold</font>
-					<textcolor>grey</textcolor>
-					<textoffsetx>30</textoffsetx>
-					<scroll>true</scroll>
-					<visible>ListItem.IsCollection</visible>
-				</control>
-				<control type="label">
-					<top>960</top>
-					<left>330</left>
-					<width>1220</width>
-					<height>30</height>
-					<font>font13_bold</font>
-					<textcolor>grey2</textcolor>
-					<label>$LOCALIZE[31010]: $INFO[Container(9143).ListItem.Property(Next_Aired),, • ]$INFO[Container(9143).ListItem.Property(Next_Aired.Season),S]$INFO[Container(9143).ListItem.Property(Next_Aired.Episode),E, - ]$INFO[Container(9143).ListItem.Property(Next_Aired.Name)]</label>
-					<visible>!String.IsEmpty(Container(9143).ListItem.Property(Next_Aired))</visible>
-				</control>
-				<control type="label">
-					<left>330</left>
-					<top>960</top>
-					<width>1220</width>
-					<height>30</height>
-					<label>$INFO[Container(9143).ListItem.Property(Status)]</label>
-					<font>font13_bold</font>
-					<textcolor>grey2</textcolor>
-					<visible>!Container.Content(movies) + String.IsEmpty(Container(9143).ListItem.Property(Next_Aired))</visible>
 				</control>
 				<control type="group">
-					<visible>ListItem.IsCollection + ![Container.OnNext | Container.OnPrevious]</visible>
-					<animation effect="fade" time="140" delay="100">Visible</animation>
+					<top>50</top>
 					<control type="label">
-						<left>300</left>
-						<top>960</top>
-						<width>1105</width>
-						<height>30</height>
-						<font>font13_bold</font>
-						<textcolor>grey</textcolor>
-						<label>$INFO[Container(4500).ListItem(0).Year]$INFO[Container(4500).ListItem(-1).Year, - ]$INFO[Container(4500).NumItems, • , $LOCALIZE[342]]$INFO[ListItem.RatingAndVotes, • ]$INFO[Window(Home).Property(SkinInfo.Set.Movies.Runtime), • , $LOCALIZE[12391]]</label>
-						<textoffsetx>30</textoffsetx>
-						<visible>!Skin.HasSetting(EnableBigFanPlot)</visible>
+						<width>60</width>
+						<height>45</height>
+						<font>IconSmallMD</font>
+						<textcolor>grey2</textcolor>
+						<label></label>
 					</control>
 					<control type="label">
-						<left>300</left>
-						<top>1000</top>
+						<left>40</left>
 						<width>1105</width>
-						<height>30</height>
+						<height>43</height>
 						<font>font13_bold</font>
-						<textcolor>grey</textcolor>
-						<label>$VAR[MovieSetGenreVar]</label>
-						<textoffsetx>30</textoffsetx>
-						<visible>!Skin.HasSetting(EnableBigFanPlot)</visible>
+						<textcolor>grey2</textcolor>
+						<label>$VAR[FloorSubLabelVar]</label>
+					</control>
+				</control>
+				<control type="group">
+					<top>95</top>
+					<visible>!String.IsEmpty(ListItem.Genre) | !String.IsEmpty(Window(Home).Property(SkinInfo.Set.Movies.Genre)) | !String.IsEmpty(Container(4500).ListItem(0).Genre)</visible>
+					<control type="label">
+						<width>60</width>
+						<height>40</height>
+						<font>IconSmallMD</font>
+						<textcolor>grey2</textcolor>
+						<label></label>
+					</control>
+					<control type="label">
+						<left>40</left>
+						<width>1305</width>
+						<height>40</height>
+						<font>font13_bold</font>
+						<textcolor>grey2</textcolor>
+						<scroll>true</scroll>
+						<label>$VAR[VideoGenreVar]</label>
 					</control>
 				</control>
 			</control>
 			<control type="textbox">
-				<top>840</top>
+				<top>830</top>
 				<left>330</left>
 				<width>1550</width>
-				<height>155</height>
+				<height>148</height>
 				<font>font14_textbox</font>
 				<textcolor>$VAR[ThemeLabelColor]</textcolor>
 				<aligny>top</aligny>
