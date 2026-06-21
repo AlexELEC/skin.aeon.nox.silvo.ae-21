@@ -78,7 +78,7 @@
 				<texturenofocus border="35,2,35,2">button_shutdown_nofocus.png</texturenofocus>
 				<onclick>CancelAlarm(shutdowntimer)</onclick>
 				<font>font14</font>
-				<label>$LOCALIZE[32300] [B]$INFO[System.Alarmpos][/B]</label>
+				<label>$LOCALIZE[31995] [B]$INFO[System.Alarmpos][/B]</label>
 				<visible>System.HasAlarm(shutdowntimer)</visible>
                 <align>center</align>
 			</control>
@@ -145,6 +145,21 @@
                 <align>center</align>
 			</control>
 			<control type="button" id="10">
+				<description>Restart Kodi</description>
+				<width>510</width>
+				<height>60</height>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="35,2,35,2">button_shutdown_focus.png</texturefocus>
+				<texturenofocus border="35,2,35,2">button_shutdown_nofocus.png</texturenofocus>
+				<onclick>RestartApp()</onclick>
+				<font>font14</font>
+				<label>$LOCALIZE[31996]</label>
+				<align>center</align>
+			</control>
+			<control type="button" id="11">
 				<description>Reboot to Android button</description>
 				<width>510</width>
 				<height>60</height>
@@ -160,21 +175,6 @@
 				<font>font14</font>
 				<label>$LOCALIZE[31576]</label>
                 <align>center</align>
-			</control>
-			<control type="button" id="11">
-				<description>Restart Kodi</description>
-				<width>510</width>
-				<height>60</height>
-				<textcolor>grey2</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<textwidth>435</textwidth>
-				<textoffsetx>45</textoffsetx>
-				<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="35,2,35,2">button_shutdown_focus.png</texturefocus>
-				<texturenofocus border="35,2,35,2">button_shutdown_nofocus.png</texturenofocus>
-				<onclick>RestartApp()</onclick>
-				<font>font14</font>
-				<label>$LOCALIZE[32301]</label>
-				<align>center</align>
 			</control>
 			<control type="button" id="12">
 				<description>Reboot button</description>
